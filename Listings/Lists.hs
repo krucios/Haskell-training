@@ -27,3 +27,17 @@ max' x y z = if x > y
 factorial' :: Integer -> Integer
 factorial' 0 = 1
 factorial' n = n * factorial (n - 1)
+
+imb :: Double -> String
+imb x
+	| x <= 18.5 = "So slim!"
+	| x <= 25 = "Body in normal, but ugly!"
+	| x <= 30 = "So fat!"
+	| otherwise = "Fat-o-matic!11!!"
+	
+bmi :: Double -> Double -> String
+bmi weight height
+	| weight / height ^ 2 <= 18.5 = "So slim!"
+	| weight / height ^ 2 <= 25 = "Body in normal, but ugly!"
+	| weight / height ^ 2 <= 30 = "So fat!"
+	| otherwise = "Fat-o-matic!11!!"
